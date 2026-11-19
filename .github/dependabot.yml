@@ -1,8 +1,10 @@
 version: 2
-# No "maven" ecosystem on purpose: pom.xml declares no versions; they are pinned in test-framework-parent
-# (test-framework repository), which the exercises use as well. Dependabot PRs must never be auto-merged.
+# Only GitHub Actions are updated by Dependabot. No "maven" and no "docker" ecosystem on purpose:
+# pom.xml declares no versions (they are pinned in test-framework-parent of the test-framework repository),
+# and the JDK of the base image must match the Java version of test-framework-parent and the exercises.
+# Dependabot PRs must never be auto-merged.
 updates:
-  - package-ecosystem: "docker"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
