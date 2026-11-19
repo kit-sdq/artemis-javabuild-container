@@ -1,7 +1,6 @@
-.settings
-.git
-target
-.classpath
-.project
-.github
-
+# Only the warm-up project goes into the image (exercise material must never end up in a layer)
+*
+!pom.xml
+!assignment/src
+!test
+!staticCodeAnalysisConfig

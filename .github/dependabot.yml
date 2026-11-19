@@ -1,15 +1,7 @@
 version: 2
+# No "maven" ecosystem on purpose: pom.xml declares no versions; they are pinned in test-framework-parent
+# (test-framework repository), which the exercises use as well. Dependabot PRs must never be auto-merged.
 updates:
-  - package-ecosystem: "maven"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "wednesday"
-      time: "11:00"
-      timezone: "Europe/Berlin"
-    commit-message:
-      prefix: "Dependency"
-      include: "scope"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
